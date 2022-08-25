@@ -60,15 +60,6 @@ module.exports = {
       this.g2Wins = g2Wins
       this.g2Losses = g2Losses
 
-      req.on('error', error => {
-        proxy.log({
-          type: 'error',
-          source: 'plugin',
-          name: this.pluginName,
-          message: `Upload failed: Server responded with code: ${error}`
-        });
-      })
-
       proxy.log({
         type: 'info',
         source: 'plugin',
